@@ -7,6 +7,7 @@ SteamVR/
 VRTK/
 Oculus/
 [Pp]lugins/
+[Bb]uilds/
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory
