@@ -3,7 +3,34 @@ guid: 56650582f340469409789f16d84f607b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - cube1: {instanceID: 0}
+  - cube2: {instanceID: 0}
+  - cube3: {instanceID: 0}
+  - cube4: {instanceID: 0}
+  - cube5: {instanceID: 0}
+  - cube6: {instanceID: 0}
+  - cube7: {instanceID: 0}
+  - cube8: {instanceID: 0}
+  - cube9: {instanceID: 0}
+  - cube10: {instanceID: 0}
+  - cube11: {instanceID: 0}
+  - cube12: {instanceID: 0}
+  - cube13: {instanceID: 0}
+  - cube14: {instanceID: 0}
+  - cube15: {instanceID: 0}
+  - cube16: {instanceID: 0}
+  - cube17: {instanceID: 0}
+  - cube18: {instanceID: 0}
+  - cube19: {instanceID: 0}
+  - cube20: {instanceID: 0}
+  - cube21: {instanceID: 0}
+  - cube22: {instanceID: 0}
+  - cube23: {instanceID: 0}
+  - cube24: {instanceID: 0}
+  - cube25: {instanceID: 0}
+  - imageAsset: {fileID: 4900000, guid: 495d7c279c42e6d4188f53d66f8da762, type: 3}
+  - plane: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
