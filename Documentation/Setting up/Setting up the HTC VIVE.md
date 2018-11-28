@@ -3,6 +3,7 @@
 ### Installing the required software
 1. Download VIVE setup from https://www.vive.com/eu/setup/vive/
 2. Run VIVE setup
+3. Download Steam and SteamVR
 
 ### Setting up with VIVE guide
 VIVE guide should open automatically after the installation is completed. If not open it manually. You should follow every step of the VIVE guide.
@@ -13,8 +14,4 @@ The VIVE guide will check if the connections are correct, you should see the fol
 ![alt text](https://github.com/.png)
 
 ### Setting up the room
-When you are finished with the VIVE guide setup SteamVR should open along with Steam VR room setup, choose your prefference and follow these steps.
-
-### Base Stations
-
-### Base Stations
+When you are finished with the VIVE guide setup, SteamVR should open and along with Steam VR room setup, choose your preference and follow these steps.
