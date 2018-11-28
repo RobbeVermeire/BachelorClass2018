@@ -54,7 +54,7 @@ public class RisingCube : MonoBehaviour {
         cube1 = CreateRectanlge(startX, startY, startY, scale, 115.5f, 59.5f, 113, 107, 400, Color.red);
         cube2 = CreateRectanlge(startX, startY, startY, scale,279.5f ,59.5f , 81, 107, 400, Color.yellow);
         cube3 = CreateRectanlge(startX, startY, startY, scale,500 ,121 ,54 ,64 ,400 , Color.blue);
-        cube4 = CreateRectanlge(startX, startY, startY, scale, 741, 109, 64, 65, 400, Color.yellow);
+        cube4 = CreateRectanlge(startX, startY, startY, scale, 741, 120.5f, 64, 65, 400, Color.yellow);
 
         cube5 = CreateRectanlge(startX, startY, startY, scale, 30, 286, 48, 100, 400, Color.blue);
         cube6 = CreateRectanlge(startX, startY, startY, scale, 115.5f, 286, 113, 100, 400, Color.blue);
