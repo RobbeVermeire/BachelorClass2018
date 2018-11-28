@@ -3,6 +3,10 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
+SteamVR/
+VRTK/
+Oculus/
+[Pp]lugins/
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory
@@ -34,3 +38,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Meta data
+*.meta
+
+# Asset files
+*.asset
