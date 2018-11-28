@@ -39,21 +39,48 @@ public class RisingCube : MonoBehaviour {
          cube.transform.position = new Vector3(105, -100, -170);
          cube.transform.localScale = v;
          cube.GetComponent<Renderer>().material.color = Color.yellow; */
-
+        InitializeCubes(0, 0, 0, 0.1f); // 100x100
     }
 	
 	// Update is called once per frame
 	void Update () {
         //v.y += x;
         //cube.transform.localScale = v;
-        InitializeCubes(0, 0, 0, 0.1); // 100x100
+        
 
     }
-    void InitializeCubes(int startX,int startY, int startZ, float scale) // scale = width of plane
+    void InitializeCubes(float startX,float startY, float startZ, float scale) // scale = width of plane
     {
-        cube1 = CreateRectanlge(startX, startY, startY, scale, 115.5, 59.5, 113, 107, 300, Color.red);
-        cube1 = CreateRectanlge(startX, startY, startY, scale,333.5 ,59.5 , 81, 107, 400, Color.yellow);
+        cube1 = CreateRectanlge(startX, startY, startY, scale, 115.5f, 59.5f, 113, 107, 400, Color.red);
+        cube2 = CreateRectanlge(startX, startY, startY, scale,279.5f ,59.5f , 81, 107, 400, Color.yellow);
+        cube3 = CreateRectanlge(startX, startY, startY, scale,500 ,121 ,54 ,64 ,400 , Color.blue);
+        cube4 = CreateRectanlge(startX, startY, startY, scale, 741, 109, 64, 65, 400, Color.yellow);
 
+        cube5 = CreateRectanlge(startX, startY, startY, scale, 30, 286, 48, 100, 400, Color.blue);
+        cube6 = CreateRectanlge(startX, startY, startY, scale, 115.5f, 286, 113, 100, 400, Color.blue);
+        cube7 = CreateRectanlge(startX, startY, startY, scale, 258, 330, 38, 188, 400, Color.red);
+        cube8 = CreateRectanlge(startX, startY, startY, scale, 397, 330.5f, 142, 189, 400, Color.yellow);
+        cube9 = CreateRectanlge(startX, startY, startY, scale, 575.5f, 285, 87, 98, 400, Color.red);
+        cube10 = CreateRectanlge(startX, startY, startY, scale, 698.5f, 382, 149, 84, 400, Color.blue);
+        cube11 = CreateRectanlge(startX, startY, startY, scale, 891.5f, 285, 77, 98, 400, Color.red);
+
+        cube12 = CreateRectanlge(startX, startY, startY, scale, 58, 478, 106, 98, 400, Color.yellow);
+        cube13 = CreateRectanlge(startX, startY, startY, scale, 216, 548.5f, 36, 33, 400, Color.red);
+        cube14 = CreateRectanlge(startX, startY, startY, scale, 500, 500, 54, 54, 400, Color.red);
+        cube15 = CreateRectanlge(startX, startY, startY, scale, 924, 448.5f, 142, 39, 400, Color.blue);
+
+        cube16 = CreateRectanlge(startX, startY, startY, scale, 22.5, 629.5, 35, 121, 400, Color.blue);
+        cube17 = CreateRectanlge(startX, startY, startY, scale, 279.5f, 630, 83, 122, 400, Color.yellow);
+        cube18 = CreateRectanlge(startX, startY, startY, scale, 500, 598.5f, 54, 59, 400, Color.yellow);
+        cube19 = CreateRectanlge(startX, startY, startY, scale, 924, 589.5f, 142, 77, 400, Color.yellow);
+
+        cube20 = CreateRectanlge(startX, startY, startY, scale, 195.5f, 825, 77, 78, 400, Color.red);
+        cube21 = CreateRectanlge(startX, startY, startY, scale, 426.5f, 779, 201, 168, 400, Color.blue);
+        cube22 = CreateRectanlge(startX, startY, startY, scale, 698.5f, 706.5f, 149, 149, 400, Color.red);
+        cube23 = CreateRectanlge(startX, startY, startY, scale, 924, 707, 142, 148, 400, Color.blue);
+
+        cube24 = CreateRectanlge(startX, startY, startY, scale, 575.5f, 962, 87, 66, 400, Color.blue);
+        cube25 = CreateRectanlge(startX, startY, startY, scale, 947, 962, 96, 66, 400, Color.red);
     }
     public GameObject CreateRectanlge(float startX,float startY,float startZ, float scale, float centerX, float centerZ, float width, float length, float heigth,Color color)
     {
