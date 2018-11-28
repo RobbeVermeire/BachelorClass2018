@@ -41,8 +41,8 @@ public class RisingCube : MonoBehaviour {
          cube.transform.position = new Vector3(105, -100, -170);
          cube.transform.localScale = v;
          cube.GetComponent<Renderer>().material.color = Color.yellow; */
-        CreateRectanlge(0, 0, 0, 100, 50, 50, 100, 100, 500, Color.Yellow);
-        CreateRectanlge(200, 0, 0, 100, 50, 50, 100, 100, 500, Color.Red);
+        CreateRectanlge(0, 0, 0, 1, 50, 50, 100, 100, 500, Color.yellow);
+        CreateRectanlge(0, 0, 150, 1, 50, 50, 100, 100, 500, Color.red);
     }
 	
 	// Update is called once per frame
@@ -87,7 +87,7 @@ public class RisingCube : MonoBehaviour {
 
         cube2.transform.position = new Vector3(startX + 0.27943048043270* scale, startY + 0.05902004454342 * scale, startZ);
         cube2.transform.localScale = new Vector3(0.08129175946547 * scale, 0.10690423162583 * scale, scale / 10); */
-        cube.GetComponent<Renderer>().material.color = Color.yellow;
+        //cube.GetComponent<Renderer>().material.color = Color.yellow;
 
       /*  cube3.transform.position = new Vector3(startX, startY, startZ);
         cube4.transform.position = new Vector3(startX, startY, startZ);
@@ -116,11 +116,12 @@ public class RisingCube : MonoBehaviour {
         cube25.transform.position = new Vector3(startX, startY, startZ); */
 
     }
-    public void CreateRectanlge(float startX,float startY,float startZ, float scale, float centerX, float centerY, float width, float length, float heigth,Color color)
+    public void CreateRectanlge(float startX,float startY,float startZ, float scale, float centerX, float centerZ, float width, float length, float heigth,Color color)
     {
+        // y-as is naarboven
         var cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        cube.transform.position = new Vector3(startX + centerX * scale, startY + centerY * scale, startZ);
-        cube.transform.localScale = new Vector3(width * scale, length * scale, heigth * scale);
+        cube.transform.position = new Vector3(startX + centerX * scale, startY , startZ + centerZ * scale);
+        cube.transform.localScale = new Vector3(width * scale, heigth * scale, length * scale);
         cube.GetComponent<Renderer>().material.color = color;
     }
 }
