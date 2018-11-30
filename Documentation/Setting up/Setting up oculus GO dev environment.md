@@ -7,6 +7,7 @@ You will need to download 3 things:
 * Unity 3D - https://store.unity.com/
 * Android Studio - https://developer.android.com/studio/
 * Oculus Core Utilities - https://developer.oculus.com/downloads/unity/
+
 Next install these programs but make sure when installing Unity to add **Android Build support**.
 
 
@@ -119,17 +120,42 @@ Download and install the Oculus Go **ADB driver**:
 2. Unzip the file.
 3. Right-click on the .inf file and select **Install**.
 
-Download and install **ADB**: https://forum.xda-developers.com/showthread.php?t=2588979 (See steps starting at 5:40 mark in video below)
+Download and install **ADB**: https://forum.xda-developers.com/showthread.php?t=2588979 and follow the steps from the video starting at 5:40.
 
 [![HOW TO Sideload Apps on the OCULUS GO](http://img.youtube.com/vi/baWEzvLC8Bo/0.jpg)](https://youtu.be/baWEzvLC8Bo?t=340)
 
 
 ## Connect your Go and Build
-TODO
+1. Connect your go to your PC via micro-USB.
+
+2. In the ADB window from the last step, run adb devices to confirm that your Go has been detected.
+
+3. Back in Unity, go to **File > Build Settings**.
+
+4. Click “Add Open Scenes”, and ensure only the scene GearVrControllerTest has the check mark next to it checked.
+
+5. **Click Build**
+
+6. Select the folder where you would like to place the .APK file that’s generated. I like to create a “Builds” folder in the project. **Save**.
+
+7. After the .APK is generated, navigate to it in File Explorer. Copy it to the same directory where you installed ADB before.
+
+8. Bring the ADB window back up.
+
+9. Run:
+```
+    adb install [NameOfYourApp].apk
+```
+
+10. You should now see the file get transferred to your Oculus Go. In a minute or two, it should then show the message Success.
+
+11. Now, to run your app, put on your Go and go to **Library > Unknown Sources**. You should see the Bundle ID of your app on the last page of the Unknown Apps list. Click on it to launch it.
+
 
 ## Updating / Uninstalling an Oculus Go application
 Updating or debugging real time for your Oculus GO application isn't really straightforward. You will need to run the following command:
 ```
-    adb uninstall 'package name'
+    adb uninstall [package name]
 ```
 Where 'package name' is the same as you entered previously: **com.[Companyname].[Projectname]**.
+If you then want to update your app just reïnstall it with the command we used before.
