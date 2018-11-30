@@ -23,8 +23,11 @@ Next install these programs but make sure when installing Unity to add **Android
 
 6. Also under **SDK Tools** make sure the follow are checked:
     > LLDB
+
     > Android SDK Platform-Tools
+
     > Android SDK Tools
+
     > NDK
 
 7. Click **Apply**. This will install everything you selected above on the SDK tabs.
@@ -39,8 +42,11 @@ Now you will need to set your “environment variables”:
 
 11. In the top section, add or modify the following variables:
     > Add or modify the environment variable **JAVA_HOME** to the JDK location.
+
     > Add or modify the environment variable **ANDROID_HOME** to the Android SDK location.
+
     > Add or modify the environment variable **ANDROID_NDK_HOME** to the Android NDK location.
+
     > Modify the environment variable **PATH**, and add the **JDK tools** location. For example 'C:\Users\AppData\Local\Android\Sdk\tools'.
 
 12. Click Ok.
@@ -88,7 +94,7 @@ To get started with your app, we’ll import some premade sample scenes that Ocu
 ## Enable Developer Mode on the Go
 (Taken from the Oculus Developer documentation)
 
-To begin development locally for Oculus Go, you must enable Developer Mode in the companion app. Before you can put your device in Developer Mode, you need to have created (or belong to) a developer organization on the [Oculus Dashboard][https://dashboard.oculus.com/].
+To begin development locally for Oculus Go, you must enable Developer Mode in the companion app. Before you can put your device in Developer Mode, you need to have created (or belong to) a developer organization on the [Oculus Dashboard](https://dashboard.oculus.com/).
 
 To join an existing organization:
 1. You’ll need to request access to the existing Organization from the admin.
@@ -109,7 +115,7 @@ To put your Oculus Go in developer mode:
 We’re almost done! Before we can actually move our Unity app from our computer to our Oculus GO, we need to install Android Debug Bridge (ADB) and the drivers for the Oculus Go.
 
 Download and install the Oculus Go **ADB driver**:
-1. Download [the zip file containing the driver][https://developer.oculus.com/downloads/package/oculus-go-adb-drivers/].
+1. Download [the zip file containing the driver](https://developer.oculus.com/downloads/package/oculus-go-adb-drivers/).
 2. Unzip the file.
 3. Right-click on the .inf file and select **Install**.
 
