@@ -1,5 +1,5 @@
 # Setting up oculus GO development environment
-Note that not all software referenced is up-to-date, so it's best to make up for yourself what versions to use! 
+Note that not all software referenced was good to use at the time of writing. But if some things do not work properly try using different versions or google for potential bugs.
 
 
 ## Downloading the right software
@@ -51,8 +51,6 @@ Now you will need to set your “environment variables”:
     > Modify the environment variable **PATH**, and add the **JDK tools** location. For example 'C:\Users\AppData\Local\Android\Sdk\tools'.
 
 12. Click Ok.
-
-Now there is still 1 thing to do to setup your android development environment. We need to delete the android SDK “tools” folder : [Your Android SDK root]/tools.
 
 
 ## Setting up Unity3D to Build for Android
