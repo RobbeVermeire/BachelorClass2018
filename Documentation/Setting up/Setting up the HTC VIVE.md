@@ -11,7 +11,7 @@ The VIVE's sensors should be minimum 2m x 1.5m and maximum 5m apart diagonally.
 Connect the link box to your pc with the usb cable, hdmi (or display port) and plug in the power. Make sure the hdmi or display port is connected to the dedicated graphics card (the same card where your monitor is connected to).
 Now connect the headset to the link box via the 3-in-1 cable.
 The VIVE guide will check if the connections are correct, you should see the following:
-![alt text](https://github.com/.png)
+![alt text](https://github.com/RobbeVermeire/BachelorClass2018/blob/master/Images/Verify%20detected.PNG)
 
 ### Setting up the room
 When you are finished with the VIVE guide setup, SteamVR should open and along with Steam VR room setup, choose your preference and follow these steps.
