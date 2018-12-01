@@ -6,7 +6,7 @@ Note that not all software referenced was good to use at the time of writing. Bu
 You will need to download 3 things:
 * Unity 3D - https://store.unity.com/
 * Android Studio - https://developer.android.com/studio/
-* Oculus Core Utilities - https://developer.oculus.com/downloads/unity/
+* Oculus Core Utilities - https://developer.oculus.com/downloads/package/oculus-utilities-for-unity-5/
 
 Next install these programs but make sure when installing Unity to add **Android Build support**.
 
@@ -35,13 +35,13 @@ Next install these programs but make sure when installing Unity to add **Android
 
 8. Back on the welcome screen, click **Configure** on the bottom right, and then **Project Defaults > Project Structure**.
 
-9. Here you’ll the file paths for the SDK, JDK and NDK. Copy these down in a text editor, we’ll need these shortly.
+9. Here you’ll see the file paths for the **SDK**, **JDK** and **NDK**. Copy these down in a text editor, we’ll need these shortly.
 
 Now you will need to set your “environment variables”:
 
 10. On your Windows machine, search for “Environment Variables”. This should take you to **Control Panel > System Properties**. Go to the **Advanced Tab**, then to the **Environment Variables** button in the lower right.
 
-11. In the top section, add or modify the following variables:
+11. In the top section, add or modify the following variables as you wrote down in the text editor:
     > Add or modify the environment variable **JAVA_HOME** to the JDK location.
 
     > Add or modify the environment variable **ANDROID_HOME** to the Android SDK location.
@@ -66,7 +66,16 @@ Now you will need to set your “environment variables”:
 
 6. Set the SDK, JDK and NDK paths to what you copied to the text file in a previous step.
 
-7. Close the Preferences window and go to ** Edit > Project Settings > Player**.
+The following error message might appear.
+
+[alt text](https://github.com/RobbeVermeire/BachelorClass2018/blob/master/Images/UnityNDKerror.PNG)
+
+To resolve this you will have to follow these steps:
+> 1. Click on the Download button next to the NDK field
+> 2. Once the zip has finished download unpack the zip in your SDK root folder.
+> 3. Remove all the contents of the 'ndk-bundle' folder and replace it with the new files from the folder you just unzipped.
+
+7. Close the Preferences window and go to **Edit > Project Settings > Player**.
 
 8. Scroll down to **XR Settings**. Click the box next to **Virtual Reality Supported**.
 
@@ -83,7 +92,7 @@ Now you will need to set your “environment variables”:
 To get started with your app, we’ll import some premade sample scenes that Oculus was nice enough to make for us.
 1. Grab the **OculusUtilities Unity package** that you downloaded before.
 
-2. Drag and drop **OculusUtilities.unity** into the Asset folders of your project, in the Unity window. Import when prompted.
+2. Drag and drop **OculusUtilities.unitypackage** into the Asset folders of your project, in the Unity window. Import when prompted.
 
 3. Now, in your Assets folder, go to **Oculus > VR > Scenes**. Double click **GearVrControllerTest**.
 
@@ -118,19 +127,26 @@ Download and install the Oculus Go **ADB driver**:
 2. Unzip the file.
 3. Right-click on the .inf file and select **Install**.
 
-Download and install **ADB**: https://forum.xda-developers.com/showthread.php?t=2588979 and follow the steps from the video starting at 5:40.
-
-[![HOW TO Sideload Apps on the OCULUS GO](http://img.youtube.com/vi/baWEzvLC8Bo/0.jpg)](https://youtu.be/baWEzvLC8Bo?t=340)
-
 
 ## Connect your Go and Build
 1. Connect your go to your PC via micro-USB.
 
-2. In the ADB window from the last step, run adb devices to confirm that your Go has been detected.
+2. Go to Start Menu, search for CMD, right-click and open as Administrator.
+
+3. Change your directory to the **platform-tools** folder of your root SDK folder. This is the installation folder of ADB. This will look something like this: 'C:\Users\YOURUSERNAME\AppData\Local\Android\sdk\platform-tools'.
+```
+    cd C:\Users\YOURUSERNAME\AppData\Local\Android\sdk\platform-tools
+```
+
+2. Now in the command prompt type the following:
+```
+    adb devices
+```
+to confirm that your Go has been detected.
 
 3. Back in Unity, go to **File > Build Settings**.
 
-4. Click “Add Open Scenes”, and ensure only the scene GearVrControllerTest has the check mark next to it checked.
+4. Click “Add Open Scenes”, and ensure only the scene GearVrControllerTest has the check mark next to it checked. If it's not showing click the button “Add open Scenes”.
 
 5. **Click Build**
 
@@ -138,7 +154,7 @@ Download and install **ADB**: https://forum.xda-developers.com/showthread.php?t=
 
 7. After the .APK is generated, navigate to it in File Explorer. Copy it to the same directory where you installed ADB before.
 
-8. Bring the ADB window back up.
+8. Bring the command prompt back up.
 
 9. Run:
 ```
@@ -156,4 +172,4 @@ Updating or debugging real time for your Oculus GO application isn't really stra
     adb uninstall [package name]
 ```
 Where 'package name' is the same as you entered previously: **com.[Companyname].[Projectname]**.
-If you then want to update your app just reïnstall it with the command we used before.
+If you then want to update your app just reïnstall it with the 'adb install' command we used before.
