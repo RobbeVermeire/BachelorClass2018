@@ -68,7 +68,7 @@ Now you will need to set your “environment variables”:
 
 The following error message might appear.
 
-[alt text](https://github.com/RobbeVermeire/BachelorClass2018/blob/master/Images/UnityNDKerror.PNG)
+![alt text](https://github.com/RobbeVermeire/BachelorClass2018/blob/master/Images/UnityNDKerror.PNG)
 
 To resolve this you will have to follow these steps:
 > 1. Click on the Download button next to the NDK field
