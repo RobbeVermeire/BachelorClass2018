@@ -8,6 +8,7 @@ public class RisingCube2 : MonoBehaviour {
     public TextAsset imageAsset;
     public GameObject plane;
     public GameObject camerRig;
+    public Camera camera;
 
     private string hex_blue = "#26348b";
     private Color myBlue;
@@ -32,21 +33,27 @@ public class RisingCube2 : MonoBehaviour {
         ColorUtility.TryParseHtmlString(hex_red, out myRed);
 
         cubes = new List<GameObject>();
-        InitializeCamera(800, 100, 800);
-        InitializePlane(0.8f);
-        InitializeCubes(0.8f);
+        InitializeCamera(2);
+        InitializePlane(2);
+        InitializeCubes(2);
     }
 	
 	// Update is called once per frame
 	void Update () {
-        RisingCubes();
+        //RisingCubes();
 	}
-    void InitializeCamera(float X, float Y, float Z)
+    void InitializeCamera(float scale,float X = 1000, float Y= 300, float Z=1000)
     {
+        X *= scale;
+        Y *= scale;
+        Z *= scale;
         camerRig.transform.position = new Vector3(X, Y, Z);
+        camera = camerRig.AddComponent<Camera>();
+        camera.nearClipPlane = 0.05f;
+        camera.farClipPlane = X *2* scale; // set far clipping plane to double the circle diameter
        // camerRig.GetComponent<Camera>().nearClipPlane = 1000f; // no camera object
     }
-    GameObject CreateRectanlge(float startX, float startY, float startZ, float X, float Y, float Z, float width, float length, Color color, float scale = 1, float heigth = 1 )
+    GameObject CreateRectanlge(float startX, float startY, float startZ, float X, float Y, float Z, float width, float length, Color color, float scale = 1, float heigth = 100 )
     {
         // X,Y,Z gemeten in linker bovenhoek
         // startX and startZ => top left corner of rectangle around circle (200x200)
@@ -66,6 +73,7 @@ public class RisingCube2 : MonoBehaviour {
     void InitializeCubes( float scale = 1,float startX=2000, float startY=0, float startZ=0) // scale = width of plane
     {
         startX *= scale;
+        
         //starX/startZ -> linksebovenhoek
         // CreateRectanlge(startX, startY, startZ, x, y, z, width, legnth, color,scale);
         CreateRectanlge(startX, startY, startZ,763 ,1 ,73,85 ,130 ,myRed,scale); //1
@@ -114,7 +122,7 @@ public class RisingCube2 : MonoBehaviour {
         CreateRectanlge(startX, startY, startZ,200,1,1547,129,125,myBlue, scale);
 
     }
-    GameObject InitializePlane(float scale = 1 ,float posX = 1000, float posY=0, float posZ=1000, float height = 0.1f)
+    GameObject InitializePlane(float scale = 1 ,float posX = 1000, float posY=0, float posZ=1000, float height = 200)
     {
         var length = 200;
         var width = 200;
@@ -145,7 +153,7 @@ public class RisingCube2 : MonoBehaviour {
         {
             foreach (GameObject c in cubes) // posy +=1 => height += 2
             {
-                var maxHeight = 70 * Mathf.Pow((Vector3.Distance(c.transform.position, camerRig.transform.position) / 200), 2); // f(x) = 50.(x/200)^2
+                var maxHeight = 50 * Mathf.Pow((Vector3.Distance(c.transform.position, camerRig.transform.position) / 200), 2); // f(x) = 50.(x/200)^2
                 if (c.transform.localScale.y < maxHeight)
                 {
                     c.transform.position += new Vector3(0, speed, 0);
