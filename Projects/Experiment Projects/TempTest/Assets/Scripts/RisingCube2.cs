@@ -48,10 +48,17 @@ public class RisingCube2 : MonoBehaviour {
         Y *= scale;
         Z *= scale;
         camerRig.transform.position = new Vector3(X, Y, Z);
-        camera = camerRig.AddComponent<Camera>();
+        if(camerRig.name == "[VRSimulator_CameraRig]")
+        {
+            camera = camerRig.AddComponent<Camera>();
+        }
+        else
+        {
+            camera = camerRig.Find(Camera);
+        }
         camera.nearClipPlane = 0.05f;
-        camera.farClipPlane = X *2* scale; // set far clipping plane to double the circle diameter
-       // camerRig.GetComponent<Camera>().nearClipPlane = 1000f; // no camera object
+        camera.farClipPlane = X * 2 * scale; // set far clipping plane to double the circle diameter
+                                             // camerRig.GetComponent<Camera>().nearClipPlane = 1000f; // no camera object
     }
     GameObject CreateRectanlge(float startX, float startY, float startZ, float X, float Y, float Z, float width, float length, Color color, float scale = 1, float heigth = 100 )
     {
