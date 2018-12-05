@@ -1,6 +1,8 @@
 # Setting up oculus GO development environment
 Note that not all software referenced was good to use at the time of writing. But if some things do not work properly try using different versions or google for potential bugs.
 
+It's recommended to install everything on the same drive preferably on your **C:** drive.
+
 
 ## Downloading the right software
 You will need to download 3 things:
