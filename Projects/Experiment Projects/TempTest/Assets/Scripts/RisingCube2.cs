@@ -23,8 +23,11 @@ public class RisingCube2 : MonoBehaviour {
     bool ready = false;
     int teller = 0;
 
+    public float Scale;
+
     // Use this for initialization
     void Start () {
+
         myBlue = new Color();
         ColorUtility.TryParseHtmlString(hex_blue, out myBlue);
         myYellow = new Color();
@@ -33,32 +36,38 @@ public class RisingCube2 : MonoBehaviour {
         ColorUtility.TryParseHtmlString(hex_red, out myRed);
 
         cubes = new List<GameObject>();
-        InitializeCamera(2);
-        InitializePlane(2);
-        InitializeCubes(2);
+        Scale = 1f;
+        
+        InitializeCamera(Scale);
+        InitializePlane(Scale);
+        InitializeCubes(Scale);
     }
 	
 	// Update is called once per frame
 	void Update () {
         //RisingCubes();
-	}
+
+
+    }
     void InitializeCamera(float scale,float X = 1000, float Y= 300, float Z=1000)
     {
+       /* if(camerRig.name == "[VRSimulator_CameraRig]")
+        {
+            //camera = camerRig.AddComponent<Camera>();// create camera object when using simulator
+            //camera = FindObjectOfType<Camera>(); // find ex
+            Scale = 0.5f;
+        }
+        else
+        {
+            Debug.Log("Searching camera object");
+            camera = FindObjectOfType<Camera>(); // find existing camera object when using VR brill
+            camera.nearClipPlane = 0.05f;
+            camera.farClipPlane = X * 4 * scale; // set far clipping plane to double the circle diameterµ
+        } */
         X *= scale;
         Y *= scale;
         Z *= scale;
         camerRig.transform.position = new Vector3(X, Y, Z);
-        if(camerRig.name == "[VRSimulator_CameraRig]")
-        {
-            camera = camerRig.AddComponent<Camera>();
-        }
-        else
-        {
-            camera = camerRig.Find(Camera);
-        }
-        camera.nearClipPlane = 0.05f;
-        camera.farClipPlane = X * 2 * scale; // set far clipping plane to double the circle diameter
-                                             // camerRig.GetComponent<Camera>().nearClipPlane = 1000f; // no camera object
     }
     GameObject CreateRectanlge(float startX, float startY, float startZ, float X, float Y, float Z, float width, float length, Color color, float scale = 1, float heigth = 100 )
     {
@@ -169,4 +178,6 @@ public class RisingCube2 : MonoBehaviour {
             }
         }
     }
+
+   
 }
