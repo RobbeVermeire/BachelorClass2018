@@ -3,4 +3,4 @@ Bachelorclass 2018 Immersive Storytelling
 
 ## Documentatie
 
-(https://github.com/ImmersiveStorytelling/EPS_Story/wiki/Tools)[EPS_Story]
+[EPS_Story](https://github.com/ImmersiveStorytelling/EPS_Story/wiki/Tools)
