@@ -51,23 +51,18 @@ public class RisingCube2 : MonoBehaviour {
     }
     void InitializeCamera(float scale,float X = 1000, float Y= 300, float Z=1000)
     {
-       /* if(camerRig.name == "[VRSimulator_CameraRig]")
-        {
-            //camera = camerRig.AddComponent<Camera>();// create camera object when using simulator
-            //camera = FindObjectOfType<Camera>(); // find ex
-            Scale = 0.5f;
-        }
-        else
-        {
-            Debug.Log("Searching camera object");
-            camera = FindObjectOfType<Camera>(); // find existing camera object when using VR brill
-            camera.nearClipPlane = 0.05f;
-            camera.farClipPlane = X * 4 * scale; // set far clipping plane to double the circle diameterµ
-        } */
+
         X *= scale;
         Y *= scale;
         Z *= scale;
         camerRig.transform.position = new Vector3(X, Y, Z);
+
+        if(camerRig.GetComponent<Camera>() != null)
+        {
+            var camera = camerRig.GetComponent<Camera>();
+            camera.farClipPlane = 10000;
+        }
+        
     }
     GameObject CreateRectanlge(float startX, float startY, float startZ, float X, float Y, float Z, float width, float length, Color color, float scale = 1, float heigth = 100 )
     {
@@ -178,6 +173,7 @@ public class RisingCube2 : MonoBehaviour {
             }
         }
     }
+}
 
    
-}
+
