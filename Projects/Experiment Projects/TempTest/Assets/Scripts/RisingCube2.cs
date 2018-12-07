@@ -57,9 +57,8 @@ public class RisingCube2 : MonoBehaviour {
         Z *= scale;
         camerRig.transform.position = new Vector3(X, Y, Z);
 
-        if(camerRig.GetComponent<Camera>() != null)
+        if(camera != null)
         {
-            var camera = camerRig.GetComponent<Camera>();
             camera.farClipPlane = 10000;
         }
         
