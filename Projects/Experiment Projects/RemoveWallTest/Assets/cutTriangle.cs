@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class cutTriangle : MonoBehaviour {
 
+    public Texture2D sourceTex;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,17 +14,24 @@ public class cutTriangle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if(Input.GetMouseButtonDown(0))
-        {
+
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if(Physics.Raycast(ray, out hit, 1000.0f))
+            if(Physics.Raycast(ray, out hit))
             {
+
                 deleteTriangle(hit.triangleIndex);
+
             }
-        }
+        
 		
 	}
+
+    private void makePixelTransparent()
+    {
+        sourceTex = this.gameObject.GetComponent<Texture2D>();
+
+    }
 
     private void deleteTriangle(int triangleIndex)
     {
@@ -37,13 +45,17 @@ public class cutTriangle : MonoBehaviour {
 
         while(j < mesh.triangles.Length)
         {
-            if (j == triangleIndex)
-                j += 3;
-            else
+            if (j != triangleIndex*3)
             {
                 newTriangles[i++] = oldTriangles[j++];
                 newTriangles[i++] = oldTriangles[j++];
                 newTriangles[i++] = oldTriangles[j++];
+            }
+                
+            else
+            {
+
+                j += 3;
             }
         }
         transform.GetComponent<MeshFilter>().mesh.triangles = newTriangles;
