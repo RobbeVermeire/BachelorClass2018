@@ -25,7 +25,8 @@ The layout is split up in 5 components, I'll explain them briefly here:
 
 ## Using Meshroom 
 
-Meshroom is not difficult to use, I'll quickly explain the steps you go through when making a 3D Model. I'm assuming that you already have the pictures of your model. If you need guidelines taking pictures you can download a pdf that gives guidelines [here](3dflow.net/zephyr-doc/3DF%20Zephyr%20Manual%202600%20English.pdf) (Scroll down to Photography Guide). The guide is for a different photogrammetry program but the tips about taking pictures you can apply to Meshroom. 
+Meshroom is not difficult to use, I'll quickly explain the steps you go through when making a 3D Model. I'm assuming that you already have the pictures of your model. If you need guidelines taking pictures you can download a pdf that gives guidelines [here](3dflow.net/zephyr-doc/3DF%20Zephyr%20Manual%202600%20English.pdf)
+(3dflow.net/zephyr-doc/3DF%20Zephyr%20Manual%202600%20English.pdf)(Scroll down to Photography Guide). The guide is for a different photogrammetry program but the tips about taking pictures you can apply to Meshroom. 
 A good amount of photos is 30 to 40 for a small object.
 
 1) After you've taken your pictures you can simply drop & drag them in the Images component in Meshroom.
