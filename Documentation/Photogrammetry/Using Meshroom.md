@@ -34,7 +34,9 @@ A good amount of photos is 30 to 40 for a small object.
 2) Remove any blurry photos, that way the computer has only clear photos for photogrammetry.
 3) Save the project, that way you don't lose all your progress when something goes wrong.
 4) Click on start, you'll see a green/yellow/blue bar appear at the top for tracking the progress.
-5) When an error occurs you'll see a the bar become partly red. Look at the logs and try to fix it, mostly errors are related to bad pictures.
+5) When an error occurs you'll see a the bar become partly red. Look at the logs and try to fix it and google them :).
+6) When Meshroom is done click on "Show Model"
+7) You can find your .obj file in your project folder at MeshroomCache/Texturing/s(omething like) 176bgh89../TexturedMesh.obj
 
 The 3D reconstruction of our object takes a long time and depends on how many images you have, the resolution of the images, your computer hardware and many more factors I won't discuss here.
 
