@@ -30,6 +30,7 @@ ExportedObj/
 *.svd
 *.pdb
 *.opendb
+*.VC.db
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -42,8 +43,8 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-# Meta data
-*.meta
+# Crashlytics generated file
+Assets/StreamingAssets/crashlytics-build.properties
 
 # Asset files
-*.asset
+#*.asset
