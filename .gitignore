@@ -47,4 +47,4 @@ sysinfo.txt
 Assets/StreamingAssets/crashlytics-build.properties
 
 # Asset files
-#*.asset
+*.asset
