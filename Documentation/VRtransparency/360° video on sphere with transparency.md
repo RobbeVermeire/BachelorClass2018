@@ -9,8 +9,6 @@ This allows you to combine filmed footage with virtually generated objects in un
 We can film a view outdoors, view indoors, view inside an object,.. everything you want really, all in 360° of course, and place virtual objects in, without the objects blocking the view. As we know, virtual objects are very easy to manipulate, so the possibilities are endless.
 
 Or we can switch the filmed footage with the virtual objects and create a virtual landscape, and add a filmed human, animal, real object, animation,.. . 
-We used this type of VR with reality combination in the examples bellow.
-
 
 
 #### 1. Create a 360 video
