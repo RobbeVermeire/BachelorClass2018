@@ -26,6 +26,9 @@ TODO possible to use aftereffects/fotoshop to scale video?
 
 Don’t forget to check the "Keep Alpha" option after importing the video!
 
+IMPORTANT: Change codec to H264 in the importsettings of the video in unity. This prevents lag when the .webm video is played in unity.
+![alt text](https://github.com/RobbeVermeire/BachelorClass2018/blob/master/Images/VideoImportSettings.png)
+
 #### 3. Create render texture for 360° video
 
 1. Add a sphere object in your unity project.
