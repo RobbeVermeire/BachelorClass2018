@@ -27,13 +27,11 @@ TODO possible to use aftereffects/fotoshop to scale video?
 Don’t forget to check the "Keep Alpha" option after importing the video!
 
 IMPORTANT: Change codec to H264 in the importsettings of the video in unity. 
-This prevents lag when the .webm video is played in unity. You can play this the bitrate mode and spatial quality aswell, 
-this will improve performance(pfs).
+This prevents lag when the .webm video is played in unity. 
 
 ![alt text](https://github.com/RobbeVermeire/BachelorClass2018/blob/master/Images/VideoImportSettings.png)
 
 #### 3. Create render texture for 360° video
-
 1. Add a sphere object in your unity project.
 2. Create a new (video)material. Add the material to the sphere.
 3. Add the custom "FlippedWithTransparency" shader to the material you just added to the sphere.
@@ -51,4 +49,17 @@ The custom shader will flip your video, render it on the inside of the sphere an
 You can change the video player settings as you want, the only import setting is "Target Texture". 
 
 It maybe helps to change the skybox to a single color, so you can see the result of your transparent video better.
+
+#### 4. Multiple 360° videos in VR
+Because we can add transparency to a 360 video now, we can play multiple videos on spheres at the same position. This results in layered 360 videos. Or you play this diffrent sized of spheres, so some 360 videos are enlarged/reduced in size.
+Eitherway, you'll use multiple spheres with each a diffrent video rendered on it, all these spheres require a videoplayer.
+
+As we know, rendering videos is very GPU heavy, so when you render multiple videos at the same time, your GPU will bottleneck very fast.
+So you will need a very good graphics card if you want to play multiple high quality 360 videos at the same time. 
+
+How to improve performance and keep a decent fps?
+When adjusting the import settings of the video in unity as we did earlier, you can change the dimensions, bitrate mode and spatial quality aswell. If you set bitrade mode and spatial quality too the lowest option, and adjust the dimension just a little bit, it will improve your performance drastically!
+
+
+
 
