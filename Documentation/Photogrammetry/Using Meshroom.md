@@ -25,7 +25,7 @@ The layout is split up in 5 components, I'll explain them briefly here:
 
 ## Using Meshroom 
 
-Meshroom is not difficult to use, I'll quickly explain the steps you go through when making a 3D Model. I'm assuming that you already have the pictures of your model. If you need guidelines taking pictures you can download a pdf that gives guidelines [here](3dflow.net/zephyr-doc/3DF%20Zephyr%20Manual%202600%20English.pdf)
+Meshroom is not difficult to use, I'll quickly explain the steps you go through when making a 3D Model. I'm assuming that you already have the pictures of your model. If you need guidelines taking pictures you can download this pdf that gives guidelines [here](3dflow.net/zephyr-doc/3DF%20Zephyr%20Manual%202600%20English.pdf)
 (3dflow.net/zephyr-doc/3DF%20Zephyr%20Manual%202600%20English.pdf)(Scroll down to Photography Guide).   
 The guide is for a different photogrammetry program but the tips about taking pictures you can apply to Meshroom. 
 A good amount of photos is 30 to 40 for a small object.
@@ -36,7 +36,7 @@ A good amount of photos is 30 to 40 for a small object.
 4) Click on start, you'll see a green/yellow/blue bar appear at the top for tracking the progress.
 5) When an error occurs you'll see a the bar become partly red. Look at the logs and try to fix it and google them :).
 6) When Meshroom is done click on "Show Model"
-7) You can find your .obj file in your project folder at MeshroomCache/Texturing/s(omething like) 176bgh89../TexturedMesh.obj
+7) You can find your .obj file in your project folder at MeshroomCache/Texturing/(something like) 176bgh89../TexturedMesh.obj
 
 The 3D reconstruction of our object takes a long time and depends on how many images you have, the resolution of the images, your computer hardware and many more factors I won't discuss here.
 
