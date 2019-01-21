@@ -16,6 +16,11 @@ Firstly a `Shader` is defined with name `name`, optionally some properties can b
 
 ## Shader example
 Lastly we will go over a shader file and explain what every part does. We've taken the holes shader from our Panamarenco project as an example:  
-![Example Shader](https://github.com/RobbeVermeire/BachelorClass2018/blob/master/Images/HolesShader.png)
+![Holes Shader](https://github.com/RobbeVermeire/BachelorClass2018/blob/master/Images/HolesShader.png)
 
+As you can see, this shader follows the ShaderLab-Syntax: It defines a shader, the properties of the shader, 1 subshader and a Fallback shader.
+The properties that are defined are 2 2DTextures `_MainText` & `_SliceGuide` and a _SliceAmount float which acts as a threshhold-value. You can access these properties from the Unity editor and change them.
+
+This shader is used to erase parts of textures dynamically by the user by pointing the vive controller and pressing a button. Doing this will set the `_SliceGuide` texture to black. Then the renderer will check what pixels from the `_SliceGuide`-textures are black, if they're black they won't be rendered.
+The check is performed by the clip()-function. It will look at all the pixels seperatly, check if the rgb value is bigger than the `_SliceAmount` threshhold value. If it is, the pixel is rendered if not the pixel is not rendered.
 
