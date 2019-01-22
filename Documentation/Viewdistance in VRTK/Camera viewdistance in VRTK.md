@@ -9,3 +9,4 @@ The default far clipping plane of the VRTK VR simulator camerarig is 1000.
 ### Proposed solution
 Adding a camera object to the VRTK camerarig, so we can adjust the far clipping plane. This works, but, you can no longer look up or down in the simulator. 
 
+The best solution, I think, is to work on a smaller scale, so you won't have to see further than 1000 units in Unity.
